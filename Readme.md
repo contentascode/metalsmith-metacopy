@@ -1,37 +1,32 @@
 
-# metalsmith-drafts
+# metalsmith-metacopy
 
-  A metalsmith plugin to hide drafts.
+  A metalsmith plugin to manipulate metadata and file metadata.
 
 ## Installation
 
-    $ npm install metalsmith-drafts
+    $ npm install metalsmith-metacopy
 
 ## CLI Usage
 
-  Install via npm and then add the `metalsmith-drafts` key to your `metalsmith.json` plugins, like so:
+  Install via npm and then add the `metalsmith-metacopy` key to your `metalsmith.json` plugins, like so:
 
 ```json
 {
   "plugins": {
-    "metalsmith-drafts": true
+    "metalsmith-metacopy": {
+      "file": [ 
+        { "src": "contents", "dest": "content" }
+      ],
+      "metadata": [
+        { "src": "collections", "dest": "site" }
+      ]
+    }
   }
 }
 ```
 
-  Then in your files YAML front-matter add `draft: true`.
-
-## Javascript Usage
-
-  Pass the plugin to `Metalsmith#use`, like so:
-
-```js
-var drafts = require('metalsmith-drafts');
-
-metalsmith.use(drafts());
-```
-
-  Then in your files YAML front-matter add `draft: true`.
+This will make the `content` key for files available also at the `content` key and copy the `collections` key (for instance created by the `metalsmith-collection`) into the `site` key in the global metadata object (both useful in the context of porting a jekyll site with liquid templates)
 
 ## License
 
