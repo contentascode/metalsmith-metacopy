@@ -2,7 +2,7 @@
   "name": "metalsmith-metacopy",
   "description": "A metalsmith plugin to manipulate metadata and file metadata",
   "repository": "git://github.com/contentascode/metalsmith-metacopy.git",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "main": "lib/index.js",
   "devDependencies": {
