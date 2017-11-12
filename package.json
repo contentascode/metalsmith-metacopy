@@ -9,5 +9,9 @@
     "mocha": "1.x",
     "metalsmith": "0.0.0",
     "assert-dir-equal": "0.0.1"
+  },
+  "dependencies": {
+    "debug": "^3.1.0",
+    "multimatch": "^2.1.0"
   }
 }
