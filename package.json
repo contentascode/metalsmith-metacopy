@@ -12,6 +12,6 @@
   },
   "dependencies": {
     "debug": "^3.1.0",
-    "multimatch": "^2.1.0"
+    "multimatch": "^7.0.0"
   }
 }
